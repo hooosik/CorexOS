@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+
+		<Platform>AnyCPU</Platform>
+		<SelfContained>true</SelfContained>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<EnableGDB>False</EnableGDB>
+		<StartCosmosGDB>False</StartCosmosGDB>
+		<VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
+		<CosmosDebugPort>Serial: COM1</CosmosDebugPort>
+		<Launch>VMware</Launch>
+		<Profile>VMware</Profile>
+		<Description>Use VMware Player or Workstation to deploy and debug.</Description>
+		<PxeInterface>192.168.0.8</PxeInterface>
+		<RemoveBootDebugOutput>False</RemoveBootDebugOutput>
+		<OptimizationLevel>2</OptimizationLevel>
+		<ExtractMapFile>False</ExtractMapFile>
+		<DebugEnabled>False</DebugEnabled>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Cosmos.Build" Version="0.0.0-localbuild" />
+		<PackageReference Include="Cosmos.System2" Version="0.0.0-localbuild" />
+		<PackageReference Include="Cosmos.Debug.Kernel" Version="0.0.0-localbuild" />
+		<PackageReference Include="IL2CPU.API" Version="0.1.0-localbuild20221121060004" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Assets\Posy Black default.bmp">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
